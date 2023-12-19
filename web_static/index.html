@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>AirBnb Clone</title>
+
+    <!-- css files -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- tap icon -->
+    <link rel="icon"
+        href="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon.png"
+        type="image/x-icon">
+
+</head>
+
+<body dir="ltr">
+
+    <header>
+        <div class="logo"></div>
+    </header>
+
+    <!-- the container has two main sections {filters, places} -->
+    <div class="container">
+        <!-- filtering places by a criteria-->
+        <section class="filters">
+            <!-- first criteria `by place location` -->
+            <div class="locations">
+                <h3>States</h3>
+                <h4>California, Arizona...</h4>
+                <ul class="popover">
+                    <li class="state">
+                        <h2>Arizona:</h2>
+                        <ul class="city">
+                            <li>Phoenix</li>
+                            <li>Tucson</li>
+                        </ul>
+                    </li>
+                    <li class="state">
+                        <h2>California:</h2>
+                        <ul class="city">
+                            <li>San Francisco</li>
+                            <li>Los Altos</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- second criteria `by palce amenities` -->
+            <div class="amenities">
+                <h3>Amenities</h3>
+                <h4>Internet, Kitchen...</h4>
+                <ul class="popover">
+                    <li>Internet</li>
+                    <li>TV</li>
+                    <li>Kitchen</li>
+                    <li>Iron</li>
+                </ul>
+            </div>
+            <!-- button to execute the requested filtering -->
+            <button>Search</button>
+        </section>
+        <!-- display available places depend on the given filter criteria -->
+        <section class="places">
+            <h1>Places</h1>
+            <!-- each article expresses to an available place -->
+            <article>
+                <h2>My home</h2>
+                <div class="price_by_night">$80</div>
+                <div class="information">
+                    <div class="max_guest">2 Gusets</div>
+                    <div class="number_rooms">1 Bedroom</div>
+                    <div class="number_bathrooms">1 Bathroom</div>
+                </div>
+                <div class="user"><b>Owner:</b> Mohammed Mustafa</div>
+                <div class="description">
+                    This is a lovely 1 bedroom and 1 bathroom apartment that can
+                    accomedate 2 people. it locates at the center of Shangai and next to subway line 1.
+                    1 stop to People Square. 2 stops to Bund. 3 stops to Jingan Temple.
+                </div>
+                <div class="amenities">
+                    <h2>Amenities</h2>
+                    <ul>
+                        <li class="tv">TV</li>
+                        <li class="wifi">WiFi</li>
+                        <li class="pet">Pets Friendly</li>
+                    </ul>
+                </div>
+                <div class="reviews">
+                    <h2>Reviews</h2>
+                    <ul>
+                        <li class="review">
+                            <h3>From Bob Dylan the 27th January 2023</h3>
+                            <p>Highly recommended!</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <h2>Tiny house</h2>
+                <div class="price_by_night">$65</div>
+                <div class="information">
+                    <div class="max_guest">4 Gusets</div>
+                    <div class="number_rooms">2 Bedroom</div>
+                    <div class="number_bathrooms">1 Bathroom</div>
+                </div>
+                <div class="user"><b>Owner:</b> Yousef Ayman</div>
+                <div class="description">
+                    Our place is a private, affordable stand-alone guets house centrally
+                    located just minutes to French Quarters, downtown, the Fair Grounds (Jazz Fest)
+                    and City Park. The guest house is a quaint, 400 square ft. with a full bath, mini kitchen,
+                    & living room. The extra high ceilings make the home feel more spacious. The sofa
+                    converts to a bed also. We have a hand made counter area that adds character to the room
+                    and a great porch/deck to relax on and have a glass of Merlot.
+                </div>
+                <div class="amenities">
+                    <h2>Amenities</h2>
+                    <ul>
+                        <li class="tv">TV</li>
+                        <li class="wifi">WiFi</li>
+                    </ul>
+                </div>
+                <div class="reviews">
+                    <h2>Reviews</h2>
+                    <ul>
+                        <li class="review">
+                            <h3>From John Smith the 12th March 2023</h3>
+                            <p>Great Place!</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <h2>A suit</h2>
+                <div class="price_by_night">$190</div>
+                <div class="information">
+                    <div class="max_guest">6 Gusets</div>
+                    <div class="number_rooms">3 Bedroom</div>
+                    <div class="number_bathrooms">2 Bathroom</div>
+                </div>
+                <div class="user"><b>Owner:</b> Hady Hassan</div>
+                <div class="description">
+                    Newly renovated spacious 2 bedrooms 2 baths in cozy Gastown style
+                    unit with the views of North Shore mountains. Woodward's landmark
+                    building situated at the historic heart of Vancouver.
+                </div>
+                <div class="amenities">
+                    <h2>Amenities</h2>
+                    <ul>
+                        <li class="tv">TV</li>
+                        <li class="wifi">WiFi</li>
+                        <li class="pet">Pets Friendly</li>
+                    </ul>
+                </div>
+                <div class="reviews">
+                    <h2>Reviews</h2>
+                    <ul>
+                        <li class="review">
+                            <h3>From Maleek Mohammed the 23th June 2023</h3>
+                            <p>Great Place, High recommend it!</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <!-- footer of the home page -->
+    <footer>
+        <b>Holberton School</b>
+    </footer>
+
+</body>
+
+</html>

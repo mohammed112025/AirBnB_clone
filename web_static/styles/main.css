@@ -1,0 +1,296 @@
+/* -------------------- common properties for the main page elements ----------------- */
+body {
+    margin: 0;
+    padding: 0;
+    color: #484848;
+    font-size: 14px;
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: auto;
+}
+
+li {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+/* --------------------------------- Header Section  --------------------------------- */
+
+header {
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: 90%;
+    background-image: url('https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/logo.png');
+    background-size: cover;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+/* -------------------------------- Search Filters ----------------------------------- */
+
+.filters {
+    background-color: white;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: left;
+}
+
+.filters button {
+    font-size: 18px;
+    background-color: #ff5a5f;
+    color: #FFFFFF;
+    height: 48px;
+    width: 20%;
+    border: 0;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+.filters button:hover {
+    opacity: .9;
+}
+
+.filters .locations,
+.filters .amenities {
+    height: 100%;
+    width: 25%;
+    /* padding-right: 40px; */
+    padding-left: 40px;
+    position: relative;
+}
+
+.filters .locations {
+    border-right: 1px solid #DDDDDD;
+}
+
+.filters .locations h3,
+.filters .amenities h3 {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+
+.filters .locations h4,
+.filters .amenities h4 {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.filters .locations:hover .popover,
+.filters .amenities:hover .popover {
+    display: flex;
+}
+
+.filters .popover {
+    position: absolute;
+    top: -100;
+    left: 0;
+    width: 80%;
+    background-color: #FAFAFA;
+    border: 1px solid#DDDDDD;
+    border-radius: 4px;
+    padding: 10%;
+    margin: 0;
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.filters .popover .state {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.filters .popover .city {
+    padding: 0 0 0 20px;
+}
+
+.filters .popover .state>h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+/* ---------------------------------- Displayed Places ------------------------------- */
+
+.places {
+    margin-left: 20px;
+    margin-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.places>h1 {
+    margin-bottom: 0;
+    font-size: 30px;
+    text-align: left;
+    flex-basis: 100%;
+}
+
+article {
+    width: 390px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ff5a5f;
+    border-radius: 4px;
+    text-align: left;
+    position: relative;
+}
+
+article>h2 {
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+    top: -30px;
+}
+
+article .price_by_night {
+    color: #ff5a5f;
+    border: 4px solid #ff5a5f;
+    border-radius: 100%;
+    min-width: 70px;
+    height: 70px;
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article .information {
+    height: 80px;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article .max_guest,
+article .number_rooms,
+article .number_bathrooms {
+    width: 100px;
+    text-align: center;
+}
+
+article .max_guest::before,
+article .number_rooms::before,
+article .number_bathrooms::before {
+    content: "";
+    height: 50px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(25%, 0%);
+}
+
+article .max_guest::before {
+    background-image: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_group.png);
+}
+
+article .number_rooms::before {
+    background-image: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bed.png);
+}
+
+article .number_bathrooms::before {
+    background-image: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bath.png);
+}
+
+article .user {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+article .amenities,
+article .reviews {
+    margin-top: 40px;
+}
+
+article .amenities>h2,
+article .reviews>h2 {
+    font-size: 16px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+article .amenities li {
+    display: flex;
+}
+
+article .amenities .pet::before,
+article .amenities .tv::before,
+article .amenities .wifi::before {
+    content: "";
+    height: 20px;
+    width: 25px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+article .amenities .pet::before {
+    background-image: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_pets.png);
+}
+
+article .amenities .tv::before {
+    background-image: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_tv.png);
+}
+
+article .amenities .wifi::before {
+    background-image: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_wifi.png);
+}
+
+article .review>h3 {
+    font-size: 14px;
+    margin: 0;
+}
+
+article .review>h3 {
+    font-size: 12px;
+    margin: 0;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+/* ---------------------------------- footer style ----------------------------------- */
+footer {
+    background-color: white;
+    height: 60px;
+    width: 100%;
+    border-top: 1px solid #CCCCCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
+}
+
+/* ----------------------------------------------------------------------------------- */
